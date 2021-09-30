@@ -1,0 +1,10 @@
+<%- include("header") -%>
+    <form action="/signup" method="POST" enctype="multipart/form-data">
+        <input type="text" name="username" required placeholder="نام کاربری"><br>
+        <input type="password" name="password" required placeholder="رمز عبور"><br>
+        <input type="text" name="fname" required placeholder="نام"><br>
+        <input type="text" name="lname" required placeholder="نام خانوادگی"><br>
+        <input type="file" accept=".png,.jpeg,.jpg" name="profile"><br>
+        <input type="submit" value="ثبت نام"><%= error %>
+    </form>  
+<%- include("footer") -%>

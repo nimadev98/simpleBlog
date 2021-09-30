@@ -1,0 +1,34 @@
+<%- include("header") -%>       
+    <div class="post-container">        
+            <div class="post">
+                <div class="avatar"><img src="<%= post.img %>" alt=""> 
+                    <% if (user && user.username === post.author) { %>
+                        <div class="post-controller">
+                            <a href="/update/<%= post.id %>" class="update">ویرایش</a>
+                            <a href="/delete/<%= post.id %>" class="delete">حذف</a> 
+                        </div> 
+                    <% } %>
+                </div>
+                <div class="post-body">
+                    <h3><%= post.title %></h3>
+                    <div class="hline"></div>
+                    <p>
+                        <%- post.body %>
+                    </p>
+                </div>
+            </div>
+            <div class="hline"></div>
+            <div class="post-details">
+                <div>
+                    <i class="far fa-clock"></i><span> <%= post.date.toLocaleDateString("en-US",{ year: 'numeric', month: 'long', day: 'numeric' }) %></span>
+                </div>
+                <div>
+                    <i class="fas fa-feather-alt"></i><span> <%= post.author %></span>
+                </div>
+                <div>
+                    <i class="fas fa-heart" id="<%= post.id %>" onclick="getEl(this.id)"></i>&nbsp;<span id="<%= "span" + post.id %>"> </span>
+                </div>
+            </div>
+           
+        </div>
+<%- include("footer") -%>

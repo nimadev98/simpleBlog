@@ -1,0 +1,10 @@
+<%- include("header") -%>
+
+    <form action="/compose" method="POST" id="compose">
+        <input type="text" name="title" required placeholder="تیتر"><br>
+        <div id="editor">
+        <textarea name="body" placeholder="دل نوشته"></textarea><br>
+        </div>
+        <input type="submit" value="انتشار">
+    </form>
+<%- include("footer") -%>

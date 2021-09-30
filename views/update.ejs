@@ -1,0 +1,7 @@
+<%- include("header") -%>
+    <form action="/update/<%= post.id %>" method="POST">
+        <input type="text" name="title" required placeholder="Title" value="<%= post.title %>"><br>
+        <textarea name="body" placeholder="Body"><%= post.body %></textarea><br>
+        <input type="submit" value="ویرایش">
+    </form>
+<%- include("footer") -%>

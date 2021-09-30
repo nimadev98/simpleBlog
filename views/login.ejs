@@ -1,0 +1,7 @@
+<%- include("header") -%>
+        <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="نام کاربری" required><br>
+        <input type="password" name="password" placeholder="رمز عبور" required><br>
+        <input type="submit" value="ورود"> <span><%= error %></span>
+        </form>
+<%- include("footer") -%>
